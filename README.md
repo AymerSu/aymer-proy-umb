@@ -52,7 +52,7 @@ aymer-proy-umb/
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/TU_USUARIO/aymer-proy-umb.git
+git clone https://github.com/AymerSu/aymer-proy-umb.git
 ```
 
 Entrar al proyecto:
