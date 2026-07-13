@@ -8,6 +8,8 @@ import {
 
 const app = express();
 
+app.disable('x-powered-by');
+
 app.use(express.json());
 
 app.post('/usuarios', (req: Request, res: Response) => {
