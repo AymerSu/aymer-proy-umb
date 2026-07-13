@@ -1,6 +1,6 @@
 {
   "name": "aymer-proy-umb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Project presentation as an UMB activity",
   "main": "index.js",
   "scripts": {
