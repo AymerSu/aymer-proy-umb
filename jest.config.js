@@ -4,6 +4,12 @@ module.exports = {
 
   collectCoverage: true,
 
+  coverageReporters: [
+    'text',
+    'html',
+    'lcov'
+  ],
+
   coverageThreshold: {
     global: {
       statements: 80,
@@ -11,7 +17,5 @@ module.exports = {
       functions: 80,
       lines: 80
     }
-  },
-  roots: ['<rootDir>/tests'],
-  coverageDirectory: 'coverage'
+  }
 };
