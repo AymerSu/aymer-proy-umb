@@ -81,4 +81,28 @@ test('Debe aumentar la cantidad de usuarios después de crear uno nuevo', () => 
 
   expect(cantidadFinal).toBe(cantidadInicial + 1);
 });
+
+test('POST /usuarios debe retornar 400 cuando no se envía nombre', async () => {
+  const res = await request(app)
+    .post('/usuarios')
+    .send({});
+
+  expect(res.status).toBe(400);
+  expect(res.body.mensaje).toBe('El nombre es obligatorio');
+});
+
+test('DELETE /usuarios/:id debe eliminar un usuario existente', async () => {
+  const creado = await request(app)
+    .post('/usuarios')
+    .send({ nombre: 'Carlos' });
+
+  const id = creado.body.id;
+
+  const eliminado = await request(app)
+    .delete(`/usuarios/${id}`);
+
+  expect(eliminado.status).toBe(200);
+  expect(eliminado.body.mensaje).toBe('Usuario eliminado');
+});
+
 });
